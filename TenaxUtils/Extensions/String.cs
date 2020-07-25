@@ -12,18 +12,18 @@ namespace TenaxUtils.Extensions
 
         private enum CharType
         {
-            DIGIT,
-            UPPERCASE,
-            LOWERCASE,
-            SPECIAL
+            Digit,
+            Uppercase,
+            Lowercase,
+            Special
         }
 
         private enum AsciiSpecialCharSet
         {
-            FIRST,
-            SECOND,
-            THIRD,
-            FOURTH
+            First,
+            Second,
+            Third,
+            Fourth
         }
 
         static TenaxString()
@@ -81,16 +81,16 @@ namespace TenaxUtils.Extensions
 
                 switch(nextCharType)
                 {
-                    case CharType.DIGIT:
+                    case CharType.Digit:
                         nextChar = (char)_rnd.Next(48, 58);
                         break;
-                    case CharType.UPPERCASE:
+                    case CharType.Uppercase:
                         nextChar = (char)_rnd.Next(65, 91);
                         break;
-                    case CharType.LOWERCASE:
+                    case CharType.Lowercase:
                         nextChar = (char)_rnd.Next(97, 123);
                         break;
-                    case CharType.SPECIAL:
+                    case CharType.Special:
                         nextChar = GetRandomAsciiSpecialChar();
                         break;
                     default:
@@ -110,13 +110,13 @@ namespace TenaxUtils.Extensions
 
             switch (nextCharSet)
             {
-                case AsciiSpecialCharSet.FIRST:
+                case AsciiSpecialCharSet.First:
                     return (char)_rnd.Next(33, 48);
-                case AsciiSpecialCharSet.SECOND:
+                case AsciiSpecialCharSet.Second:
                     return (char)_rnd.Next(58, 65);
-                case AsciiSpecialCharSet.THIRD:
+                case AsciiSpecialCharSet.Third:
                     return (char)_rnd.Next(91, 97);
-                case AsciiSpecialCharSet.FOURTH:
+                case AsciiSpecialCharSet.Fourth:
                     return (char)_rnd.Next(123, 127);
                 default:
                     return default;
