@@ -46,6 +46,8 @@ namespace TenaxUtils.Extensions
                 return null;
             }
 
+            startIndex += leftSubstring?.Length ?? 0;
+
             var endIndex = string.IsNullOrEmpty(rightSubstring) ? text.Length
                 : text.IndexOf(rightSubstring, startIndex, StringComparison.Ordinal);
 
