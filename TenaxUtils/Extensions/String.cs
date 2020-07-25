@@ -8,7 +8,7 @@ namespace TenaxUtils.Extensions
         private const int CharTypeNumber = 4;
         private const int AsciiSpecialCharSetNumber = 4;
 
-        private static Random _rnd;
+        private static readonly Random _rnd;
 
         private enum CharType
         {
