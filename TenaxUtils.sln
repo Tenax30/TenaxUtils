@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29519.87
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TenaxUtils", "TenaxUtils\TenaxUtils.csproj", "{508923B8-7395-4DC4-AC82-6EEF8BCA79C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TenaxUtils", "TenaxUtils\TenaxUtils.csproj", "{508923B8-7395-4DC4-AC82-6EEF8BCA79C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TenaxUtils.Tests", "TenaxUtils.Tests\TenaxUtils.Tests.csproj", "{9955D785-06E6-4887-B81C-9BCBAAF078D6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{508923B8-7395-4DC4-AC82-6EEF8BCA79C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{508923B8-7395-4DC4-AC82-6EEF8BCA79C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{508923B8-7395-4DC4-AC82-6EEF8BCA79C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9955D785-06E6-4887-B81C-9BCBAAF078D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9955D785-06E6-4887-B81C-9BCBAAF078D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9955D785-06E6-4887-B81C-9BCBAAF078D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9955D785-06E6-4887-B81C-9BCBAAF078D6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
