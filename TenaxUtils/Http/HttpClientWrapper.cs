@@ -11,7 +11,7 @@ namespace TenaxUtils.Http
 
         public HttpClientWrapper(HttpClient httpClient)
         {
-            _httpClient = httpClient;
+            _httpClient = httpClient ?? throw new ArgumentNullException("HttpClient client must not be null");
         }
 
         public async Task<HttpResponse<T>> SendAsync<T>(HttpMethod method, Uri uri, HttpContent content = null)
