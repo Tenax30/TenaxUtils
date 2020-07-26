@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.IO;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -12,6 +14,22 @@ namespace TenaxUtils.Http
         public HttpClientWrapper(HttpClient httpClient)
         {
             _httpClient = httpClient ?? throw new ArgumentNullException("HttpClient client must not be null");
+        }
+
+        public void AddDefaultHeader(string name, string value)
+        {
+            if (!_httpClient.DefaultRequestHeaders.Contains(name))
+            {
+                _httpClient.DefaultRequestHeaders.Add(name, value);
+            }
+        }
+
+        public void AddDefaultHeaders(IDictionary<string, string> headers)
+        {
+            foreach (var header in headers)
+            {
+                AddDefaultHeader(header.Key, header.Value);
+            }
         }
 
         public async Task<HttpResponse<T>> SendAsync<T>(HttpMethod method, Uri uri, HttpContent content = null)
