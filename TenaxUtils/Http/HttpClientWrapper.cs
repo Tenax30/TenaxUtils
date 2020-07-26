@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace TenaxUtils.Http
 {
-    public class HttpClientWrapper
+    public class HttpClientWrapper : IDisposable
     {
         private readonly HttpClient _httpClient;
 
@@ -54,5 +54,9 @@ namespace TenaxUtils.Http
             }
         }
 
+        public void Dispose()
+        {
+            _httpClient?.Dispose();
+        }
     }
 }
